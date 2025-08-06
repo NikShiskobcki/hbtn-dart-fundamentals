@@ -134,4 +134,49 @@ void main() {
     }
   }
   print('');
+
+//0. Shopping List
+  List shoppingList = ['Milk','Bread','Eggs'];
+  shoppingList.add('cheese');
+  shoppingList.add('butter');
+  shoppingList.remove('Bread');
+  print('$shoppingList');
+  print('');
+
+//1. Capital Cities
+  Map<String, String> capitals = {"France":"Paris","Japan": "Tokyo","Brazil": "Brasilia"};
+  capitals.addAll({"Canada": "Ottawa"});
+  print('${capitals['Japan']}');
+  for (var i in capitals.entries){
+    print('${i.key}: ${i.value}');
+  }
+  print('');
+
+//2. Unique Numbers
+  Set<int> numbers = Set.from([1, 2, 2, 3, 4, 4, 5]);
+  print('$numbers');
+  print('');
+
+//3. Print All Items (for-in)
+  for (var item in shoppingList){
+    print('$item');
+  }
+  print('');
+
+//4. Filter Scores (where)
+  List<int> scores = [85, 42, 90, 67, 58];
+  List<int> auxScores = scores.where((score) => score >= 60).toList();
+  print('$auxScores');
+  print('');
+
+//5. Uppercase Cities (map)
+  List<String> cities = ['london','madrid','rome'];
+  List<String> auxCities = cities.map((city) => city.toUpperCase()).toList();
+  print('$auxCities');
+  print('');
+
+//6. Sorted List
+  List<int> unsorted = [9, 2, 7, 4, 1];
+  unsorted.sort();
+  print('$unsorted');
 }
