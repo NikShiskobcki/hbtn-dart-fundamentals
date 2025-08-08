@@ -179,4 +179,71 @@ void main() {
   List<int> unsorted = [9, 2, 7, 4, 1];
   unsorted.sort();
   print('$unsorted');
+  print('');
+
+//0. Hello Function
+  sayHello();print('');
+//1. Personalized Greeting
+  greet('Sam');print(''); 
+//2. Full Name Builder
+  print('Full name: ${buildFullName('Ada','Lovelace')}'); print('');
+
+//3. Temperature Conversion
+  print('${toCelsius(98.6)}');print('');
+
+//4. Repeating Multiples
+  printMultiples(3);print('');
+  printMultiples(4,max:3);print('');
+
+//5. Quick Square
+  print('${square(6)}');print('');
+
+//6. Anonymous Power
+  List<int> numbers2 = [1, 2, 3, 4];
+  numbers2.forEach((number) {
+    print(number * number);
+  });
+  print('');
+
+//7. Local vs. Global
+  printMessage();
+  print(message); 
 }
+
+//0. Hello Function
+void sayHello(){
+  print('Hello, Dart!');
+ }
+
+ //1. Personalized Greeting
+ void greet(String name){
+  print('Hello, $name!');
+ }
+
+//2. Full Name Builder
+String buildFullName(String firstName, String lastName){
+  return '$firstName $lastName';
+}
+
+//3. Temperature Conversion
+double toCelsius(double fahrenheit){
+  return (fahrenheit - 32) * 5/9;
+}
+
+//4. Repeating Multiples
+void printMultiples(int number, {int max = 5}){
+  for(var i=1;i<=max;i++){
+    print('${number*i}');
+  }
+}
+
+//5. Quick Square
+int square(int x) => x * x;
+
+//7. Local vs. Global
+String message = "Global";
+void printMessage() {
+  String message = "Local";
+  print(message);
+}
+
